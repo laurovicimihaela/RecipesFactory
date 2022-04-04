@@ -1,12 +1,17 @@
 const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
+//const cors = require('cors');
+//const mongoose = require('mongoose');
 
-require('dotenv').config();
+//require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+app.listen(3000,() => console.log("Server listening at port 3000"));
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+// const port = process.env.PORT || 5000;
+/*
 app.use(cors());
 app.use(express.json());
 
@@ -26,4 +31,4 @@ app.use('/users', usersRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
-});
+});*/
