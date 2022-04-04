@@ -8,4 +8,4 @@ A web application* that creates a community of food bloggers, where they can pos
 ## Technologies Used
 - Front-end: ReactJS
 - Backend: NodeJS 
-- Database: MySQL 
+- Database: MongoDB
