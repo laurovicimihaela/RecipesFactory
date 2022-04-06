@@ -1,34 +1,18 @@
-const express = require('express');
-//const cors = require('cors');
-//const mongoose = require('mongoose');
+var express = require("express");
+var mongoose = require("mongoose");
+var app = express();
 
-//require('dotenv').config();
+//environment variables
+require('dotenv').config();
 
-const app = express();
-app.listen(3000,() => console.log("Server listening at port 3000"));
-
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-// const port = process.env.PORT || 5000;
-/*
-app.use(cors());
-app.use(express.json());
-
+//database connection
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
-);
+mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true});
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
-})
-
-const exercisesRouter = require('./routes/exercises');
-const usersRouter = require('./routes/users');
-
-app.use('/exercises', exercisesRouter);
-app.use('/users', usersRouter);
-
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});*/
+  console.log("Connected Database Successfully");
+});
+app.listen(3000,function(req,res){
+  console.log("Server is started on port 3000");
+}
+);
