@@ -13,7 +13,7 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("Connected Database Successfully");
 });
-app.listen(3000,function(req,res){
+app.listen(3000, function (req, res) {
   console.log("Server is started on port 3000");
 }
 );

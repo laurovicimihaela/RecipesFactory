@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\mern-recipes-factory",
+    "\\mern-recipes-factory\\backend\\models",
+    "\\mern-recipes-factory\\src"
   ],
-  "SelectedNode": "\\C:\\Users\\asus\\Source\\Repos\\RecipesFactory1",
+  "SelectedNode": "\\mern-recipes-factory\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
