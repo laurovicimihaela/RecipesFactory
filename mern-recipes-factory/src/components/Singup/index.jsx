@@ -7,10 +7,10 @@ const Signup = () => {
 	const [data, setData] = useState({
 		username: "",
 		name: "",
-		age: "",
+		age: 0,
 		email: "",
 		password: "",
-		isBlogger: "",
+		isBlogger: false,
 	});
 	const [error, setError] = useState("");
 	const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/users";
+			const url = "http://localhost:3000/api/users";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);
@@ -93,7 +93,6 @@ const Signup = () => {
 							name="isBlogger"
 							onChange={handleChange}
 							value={data.isBlogger}
-							required
 							className={styles.input}
 						/>
 						

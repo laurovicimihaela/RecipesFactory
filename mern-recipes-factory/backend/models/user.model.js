@@ -57,5 +57,5 @@ const validate = (data) => {
 	return schema.validate(data);
 };
 
-module.exports = User;
+module.exports = { User, validate };
 	
