@@ -52,7 +52,7 @@ const validate = (data) => {
 		name: Joi.string().required().label("Name"),
 		email: Joi.string().email().required().label("Email"),
 		password: passwordComplexity().required().label("Password"),
-		isBlogger: Joi.string().required().label("Blogger"),
+		isBlogger: Joi.boolean().required().label("Blogger"),
 	});
 	return schema.validate(data);
 };
