@@ -7,7 +7,6 @@ const Signup = () => {
 	const [data, setData] = useState({
 		username: "",
 		name: "",
-		age: 0,
 		email: "",
 		password: "",
 		isBlogger: false,
