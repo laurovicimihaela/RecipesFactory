@@ -86,15 +86,17 @@ const Signup = () => {
 							required
 							className={styles.input}
 						/>
-
+						<div>
 						<input
 							type="checkbox"
 							name="isBlogger"
+							id="blogger"
 							onChange={handleChange}
 							value={data.isBlogger}
-							className={styles.input}
+							//className={styles.input}
 						/>
-
+						<label for="blogger"> I am a blogger</label>
+						</div>
 
 						{error && <div className={styles.error_msg}>{error}</div>}
 						<button type="submit" className={styles.green_btn}>
