@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\mern-recipes-factory",
+    "\\mern-recipes-factory\\src",
+    "\\mern-recipes-factory\\src\\components",
+    "\\mern-recipes-factory\\src\\components\\Signup",
+    "\\mern-recipes-factory\\src\\components\\Write_post"
   ],
-  "SelectedNode": "\\C:\\Users\\asus\\Source\\Repos\\RecipesFactory1",
   "PreviewInSolutionExplorer": false
 }
