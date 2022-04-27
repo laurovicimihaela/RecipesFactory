@@ -10,13 +10,33 @@ const recipeSchema = new Schema({
 		type: String,
 		required: true
 	},
+	requiredTime: {
+		type: Number,
+		required: true
+	},
+	numberOfPortions: {
+		type: Number,
+		required: true
+	},
+	difficulty: {
+		type: String,
+		required: true
+    },
+	ingredients: {
+		type: String,
+		required: true
+    },
 	description: {
 		type: String,
 		required: true
 	},
-	date: {
-		type: Date,
-		required: true
+	photo: {
+		type: String,
+		required: false,
+	},
+	categories: {
+		type: Array,
+		required: false,
 	}
 }, {
 	timestamps: true,
