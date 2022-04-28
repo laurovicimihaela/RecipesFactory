@@ -9,7 +9,9 @@ router.post("/", async (req, res) => {
 		if (error)
 			return res.status(400).send({ message: error.details[0].message });
 
-		const user = await User.findOne({ username: req.body.email });
+		
+		const user = await User.findOne({ email: req.body.email });
+		console.log(user);
 		if (!user)
 			return res.status(401).send({ message: "Invalid Email or Password" });
 
@@ -19,7 +21,7 @@ router.post("/", async (req, res) => {
 		);
 		
 		if (!validPassword)
-			return res.status(401).send({ message: "Invalid Email or Password" });
+			return res.status(401).send({ message: "Invalid Password" });
 		
 		//const token = user.generateAuthToken();
 		res.status(200).send({ message: "Logged in successfully" });
