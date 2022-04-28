@@ -2,24 +2,46 @@ import { useContext, useState } from "react";
 import "./write_post.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Write() {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const [file, setFile] = useState(null);
+    const [data, setData] = useState({
+        requiedTime: 0,
+        numberOfPortions: 0,
+        difficulty: "",
+        ingredients: "",
+        title: "",
+        description: "",
+        photo: "",
+        categories: "",
+
+    });
     const { user } = useContext(Context);
+    const [error, setError] = useState("");
+
+    const handleChange = ({ currentTarget: input }) => {
+        setData({ ...data, [input.name]: input.value });
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.reload();
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newPost = {
             username: user.username,
-            timeToMake,
-            nrOfPortions,
+            requiedTime,
+            numberOfPortions,
             difficulty,
             ingredients,
             title,
-            desc,
-
+            description,
+            categories,
         };
         if (file) {
             const data = new FormData();
@@ -38,11 +60,8 @@ export default function Write() {
     };
     return (
         <div className="write">
-            {file && (
-                <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-            )}
-            <form className="writeForm" onSubmit={handleSubmit}>
-                <div className="writeFormGroup">
+            <form className="writeForm" >
+                <div className="top">
                     <label htmlFor="fileInput">
                         <i className="writeIcon fas fa-plus"></i>
                     </label>
@@ -55,45 +74,58 @@ export default function Write() {
                     <input
                         type="text"
                         placeholder="Title"
-                        className="writeInput"
+                        name="title"
+                        value={title}
+                        className="writeInput writeTitle"
                         autoFocus={true}
-                        onChange={e => setTitle(e.target.value)}
+                        //onChange={e => setTitle(e.target.value)}
+                        onChange={handleChange}
                     />
                 </div>
                 <div className="writeFormGroup">
-                    <textarea
-                        placeholder="Time to make it: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDesc(e.target.value)}
-                    ></textarea>
-                    <textarea
-                        placeholder="Number of portions: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDesc(e.target.value)}
-                    ></textarea>
-                    <textarea
-                        placeholder="Difficulty: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDesc(e.target.value)}
-                    ></textarea>
-                    <textarea
-                        placeholder="Ingredients: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDesc(e.target.value)}
-                    ></textarea>
-                    <textarea
-                        placeholder="Description: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDesc(e.target.value)}
-                    ></textarea>
+                    <form className="form_container" onSubmit={handleSubmit}>
+                        <input
+                            placeholder="Time to make it: (mins)"
+                            type="text"
+                            className="writeInput"
+                            //onChange={e => setDesc(e.target.value)}
+                            onChange={handleChange}
+                        />
+                        <input
+                            placeholder="Number of portions: "
+                            type="text"
+                            className="writeInput"
+                            //onChange={e => setDesc(e.target.value)}
+                            onChange={handleChange}
+                        />
+                        <input
+                            placeholder="Difficulty: "
+                            type="text"
+                            className="writeInput"
+                            //onChange={e => setDesc(e.target.value)}
+                            onChange={handleChange}
+                        />
+                        <input
+                            placeholder="Ingredients: "
+                            type="text"
+                            className="writeInput"
+                            //onChange={e => setDesc(e.target.value)}
+                            onChange={handleChange}
+                        />
+                        <input
+                            placeholder="Description: "
+                            type="text"
+                            className="writeInput"
+                            //onChange={e => setDesc(e.target.value)}
+                            onChange={handleChange}
+                        />
+                    </form>
                 </div>
-                <button className="writeSubmit" type="submit">
+                <button className="writeSubmit" onClick={handleSubmit}>
                     Publish
+                </button>
+                <button className="writeSubmit" onClick={handleLogout}>
+                    Logout
                 </button>
             </form>
         </div>
