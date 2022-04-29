@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
+	z-index: 1;
 }
 
 .navbar h1 {
@@ -35,7 +36,7 @@
 	min-width: 100%;
 	background-position: center;
 	background-size: cover;
-
+	z-index: -2;
 }
 body {
 	height: auto;
@@ -97,4 +98,10 @@ body {
 	position: fixed;
 	top: 18px;
 	right: 360px;
+}
+.carousel{
+	padding: 230px;
+	margin: 0px, 80px, 0px, 0px;
+	position: -webkit-sticky; /* Safari */
+  	position: sticky;
 }

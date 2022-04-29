@@ -1,6 +1,8 @@
 import styles from "./styles.module.css";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CarouselContainer from "./CarouselContainer";
 
 const Main = () => {
 	const handleLogout = () => {
@@ -14,7 +16,6 @@ const Main = () => {
 	return (
 		
 		<body>
-		<div className={styles.main_container}>
 			<nav className={styles.navbar}>
 				<h1>The Recipes Factory</h1>
 				<div className={styles.allign2}>
@@ -36,13 +37,13 @@ const Main = () => {
 				</button>
 
 			</nav>
+		<div className={styles.container}>
 			
 			
-			<div className={styles.container}>
-				
-			</div>
+				<CarouselContainer/>
 			
 		</div>
+		
 		</body>
 	);
 };
