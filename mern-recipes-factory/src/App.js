@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Main from "./components/Main";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import WritePost from "./components/Write_post";
+import WriteRecipe from "./components/WriteRecipe";
 
 function App() {
 	const user = localStorage.getItem("token");
