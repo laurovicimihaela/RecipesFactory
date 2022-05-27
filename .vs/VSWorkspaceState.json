@@ -5,12 +5,11 @@
     "\\mern-recipes-factory\\public",
     "\\mern-recipes-factory\\src",
     "\\mern-recipes-factory\\src\\components",
-    "\\mern-recipes-factory\\src\\components\\Login",
-    "\\mern-recipes-factory\\src\\components\\Main",
     "\\mern-recipes-factory\\src\\components\\Signup",
-    "\\mern-recipes-factory\\src\\components\\Write_post",
+    "\\mern-recipes-factory\\src\\components\\SingleRecipe",
+    "\\mern-recipes-factory\\src\\components\\WriteRecipe",
     "\\mern-recipes-factory\\src\\context"
   ],
-  "SelectedNode": "\\mern-recipes-factory\\src\\App.js",
+  "SelectedNode": "\\mern-recipes-factory\\src\\components\\WriteRecipe\\img.jpg",
   "PreviewInSolutionExplorer": false
 }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./singleRecipe.css";
 
-export default function SingleRecipe() {
+export default function ShowRecipe() {
     const location = useLocation();
     const path = location.pathname.split("/")[2];
     const [recipe, setRecipe] = useState({});

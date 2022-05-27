@@ -1,14 +1,16 @@
-import { useContext, useState } from "react";
+﻿import { useContext, useState } from "react";
 import "./writeRecipe.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import Dropdown from "../Main/Dropdown";
+import styles from "../Main/styles.module.css";
 
 export default function Write() {
     const [title, setTitle] = useState("");
     const [requiredTime, setRequiredTime] = useState("");
     const [numberOfPortions, setNumberOfPortions] = useState("");
     const [difficulty, setDifficulty] = useState("");
-    const [ingredients, setIngredients] = useState(""); 
+    const [ingredients, setIngredients] = useState("");
     const [file, setFile] = useState(null);
 
     const { user } = useContext(Context);
@@ -38,67 +40,115 @@ export default function Write() {
             window.location.replace("/post/" + res.data._id);
         } catch (err) { }
     };
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.reload();
+    };
+    const [selected, setSelected] = useState("Categorii");
+    const [selected1, setSelected1] = useState("Contul meu");
+    const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
+    const options1 = ["Salvate", "Profilul meu"];
     return (
-        <div className="write">
-            {file && (
-                <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-            )}
-            <form className="writeForm" onSubmit={handleSubmit}>
-                <div className="writeFormGroup">
-                    <label htmlFor="fileInput">
-                        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-                        <i class="material-icons">&#xe439;</i>
-                    </label>
-                    <input
-                        type="file"
-                        id="fileInput"
-                        style={{ display: "none" }}
-                        onChange={(e) => setFile(e.target.files[0])}
-                    />
-                    <input
-                        type="text"
-                        placeholder="Title"
-                        className="writeInput"
-                        autoFocus={true}
-                        onChange={e => setTitle(e.target.value)}
-                    />
+
+        <body>
+            <nav className={styles.navbar}>
+                <h1>The Recipes Factory</h1>
+                <div className={styles.allign2}>
+                    <Dropdown selected={selected} setSelected={setSelected} options={options} />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
-                <div className="writeFormGroup">
-                    <textarea
-                        placeholder="Required time (minutes): "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setRequiredTime(e.target.value)}
-                    ></textarea>
+
+                <div className={styles.allign1}>
+                    <Dropdown selected={selected1} setSelected={setSelected1} options={options1} />
+                    <br />
+                    <br />
                 </div>
-                <div className="writeFormGroup">
-                    <textarea
-                        placeholder="Number of portions: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setNumberOfPortions(e.target.value)}
-                    ></textarea>
-                </div>
-                <div className="writeFormGroup">
-                    <textarea
-                        placeholder="Level of difficulty: (easy / medium / difficult):"
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setDifficulty(e.target.value)}
-                    ></textarea>
-                </div>
-                <div className="writeFormGroup">
-                    <textarea
-                        placeholder="List of ingredients: "
-                        type="text"
-                        className="writeInput writeText"
-                        onChange={e => setIngredients(e.target.value)}
-                    ></textarea>
-                </div>
-                <button className="writeSubmit" type="submit">
-                    Publish
+
+                <button className={styles.white_btn} onClick={handleLogout}>
+                    Log out
                 </button>
-            </form>
-        </div>
+
+            </nav>
+            <div className="write">
+                {file && (
+                    <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
+                )}
+                {!file && (
+                    <div className="writeFormGroup">
+                        <textarea
+                            placeholder="Required time (minutes): "
+                            type="text"
+                            className="writeInput writeText"
+                            onChange={e => setRequiredTime(e.target.value)}
+                        ></textarea>
+                    </div>
+                )}
+                <form className="writeForm" onSubmit={handleSubmit}>
+                    <div className="writeFormGroup">
+                       
+                    </div>
+                    <div className="writeFormGroup">
+                        <input
+                            type="text"
+                            placeholder="Title"
+                            className="writeInput"
+                            autoFocus={true}
+                            onChange={e => setTitle(e.target.value)}
+                        />
+                    </div>
+                    <div className="writeFormGroup">
+                        <textarea
+                            placeholder="Required time (minutes): "
+                            type="text"
+                            className="writeInput writeText"
+                            onChange={e => setRequiredTime(e.target.value)}
+                            ></textarea>
+                    </div>
+                    <div className="writeFormGroup">
+                        <textarea
+                            placeholder="Number of portions: "
+                            type="text"
+                            className="writeInput writeText"
+                            onChange={e => setNumberOfPortions(e.target.value)}
+                        ></textarea>
+                    </div>
+                    <div className="writeFormGroup">
+                        <textarea
+                            placeholder="Level of difficulty: (easy / medium / difficult):"
+                            type="text"
+                            className="writeInput writeText"
+                            onChange={e => setDifficulty(e.target.value)}
+                        ></textarea>
+                    </div>
+                    <div className="writeFormGroup">
+                        <textarea
+                            placeholder="List of ingredients: "
+                            type="text"
+                            className="writeInput writeText"
+                            onChange={e => setIngredients(e.target.value)}
+                        ></textarea>
+                    </div>
+                    <div className="writeFormGroup writeText writeInput">
+                        <label htmlFor="fileInput">
+                            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+                            <i class="material-icons">&#xe439;</i>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            style={{ display: "none" }}
+                            onChange={(e) => setFile(e.target.files[0])}
+                        />
+                        </div>
+                    <button className="writeSubmit" type="submit">
+                        Publish
+                    </button>
+                </form>
+            </div>
+        </body>
     );
 }
