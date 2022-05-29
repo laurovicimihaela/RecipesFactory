@@ -62,7 +62,7 @@ export default function ShowRecipe() {
                 ) : (
                     <h1 className="singleRecipeTitle">
                         {title}
-                        {Recipe.username === user?.username && (
+                        {recipe.username === user?.username && (
                             <div className="singleRecipeEdit">
                                 <i
                                     className="singleRecipeIcon far fa-edit"
