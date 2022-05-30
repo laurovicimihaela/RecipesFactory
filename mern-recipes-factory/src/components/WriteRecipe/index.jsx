@@ -4,6 +4,7 @@ import axios from "axios";
 import { Context } from "../../context/Context";
 import Dropdown from "../Main/Dropdown";
 import styles from "../Main/styles.module.css";
+import Dropdown1 from "./Dropdown1";
 
 export default function Write() {
     const [title, setTitle] = useState("");
@@ -46,8 +47,10 @@ export default function Write() {
     };
     const [selected, setSelected] = useState("Categorii");
     const [selected1, setSelected1] = useState("Contul meu");
+    const [selected2, setSelected2] = useState("Level of difficulty:");
     const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
     const options1 = ["Salvate", "Profilul meu"];
+    const options2 = ["","  Easy", " Medium", "  Difficult"];
     return (
 
         <body>
@@ -117,33 +120,38 @@ export default function Write() {
                     </div>
                     <div className="writeFormGroup">
                         <textarea
-                            placeholder="Level of difficulty: (easy / medium / difficult):"
-                            type="text"
-                            className="writeInput writeText"
-                            onChange={e => setDifficulty(e.target.value)}
-                        ></textarea>
-                    </div>
-                    <div className="writeFormGroup">
-                        <textarea
                             placeholder="List of ingredients: "
                             type="text"
                             className="writeInput writeText"
                             onChange={e => setIngredients(e.target.value)}
                         ></textarea>
                     </div>
-                    <div className="writeFormGroup writeText writeInput">
-                        <label htmlFor="fileInput">
-                            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-                            <i class="material-icons">&#xe439;</i>
-                        </label>
+                    {!file && (
+                        <div className="writeFormGroup writeText writeInput">
+                            <label htmlFor="fileInput">
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+                                <i class="material-icons">&#xe439;</i>
+                            </label>
 
-                        <input
-                            type="file"
-                            id="fileInput"
-                            style={{ display: "none" }}
-                            onChange={(e) => setFile(e.target.files[0])}
-                        />
+                            <input
+                                type="file"
+                                id="fileInput"
+                                style={{ display: "none" }}
+                                onChange={(e) => setFile(e.target.files[0])}
+                            />
                         </div>
+                    )}
+                    <div className="writeFormGroup writeInput writeText">
+                        <Dropdown1 selected={selected2} setSelected={setSelected2} options={options2}
+                            onChange={e => setDifficulty(e.target.value)}
+                        />
+                        {/*<textarea*/}
+                        {/*    placeholder="Level of difficulty: (easy / medium / difficult):"*/}
+                        {/*    type="text"*/}
+                        {/*    className="writeInput writeText"*/}
+                        {/*    onChange={e => setDifficulty(e.target.value)}*/}
+                        {/*></textarea>*/}
+                    </div>
                     <button className="writeSubmit" type="submit">
                         Publish
                     </button>

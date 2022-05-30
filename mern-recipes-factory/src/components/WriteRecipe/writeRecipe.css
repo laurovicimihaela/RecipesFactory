@@ -9,7 +9,7 @@
 
 .writeImg {
     margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 250px;
     width: 70vw;
     height: 250px;
     border-radius: 10px;
@@ -21,7 +21,7 @@
 }
 
 .writeFormGroup {
-    margin-left: 150px;
+    margin-left: 250px;
     display: flex;
 }
 
