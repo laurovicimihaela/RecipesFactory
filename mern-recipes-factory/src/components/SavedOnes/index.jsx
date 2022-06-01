@@ -14,10 +14,22 @@ const SavedOnes = () => {
 	};
 	const handleMyPage = () => {
 		window.location = "/mypage";
-	}
+	};
 	const handleSavedOnes= () => {
 		window.location = "/savedones";
-	}
+	};
+	const handleMicDejun= () => {
+		window.location = "/micdejun";
+	};
+	const handleFelPrincipal= () => {
+		window.location = "/felprincipal";
+	};
+	const handleSupa= () => {
+		window.location = "/supa";
+	};
+	const handleDesert= () => {
+		window.location = "/desert";
+	};
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
@@ -37,6 +49,15 @@ const SavedOnes = () => {
 			handleMyPage()
 		else if(selected1 === "Salvate")
 			handleSavedOnes()
+		else if(selected === "Mic Dejun")
+			handleMicDejun()
+		else if(selected === "Desert")
+			handleDesert()
+		else if(selected === "Fel Principal")
+			handleFelPrincipal()
+		else if(selected === "Supa")
+			handleSupa()
+		
 	}
 	return (
 		
@@ -61,7 +82,7 @@ const SavedOnes = () => {
 			<Grid container >
 			
 			{Recipes_data.map((element, index) => (
-				<Grid item key={index} maxHeight={200} maxWidth={200} margin={10}>
+				<Grid item key={index} maxHeight={220} maxWidth={200} margin={11}>
 				<RecipeCard {...element} />
 				</Grid>
 			))}

@@ -12,10 +12,22 @@ const Main = () => {
 	};
 	const handleMyPage = () => {
 		window.location = "/mypage";
-	}
+	};
 	const handleSavedOnes= () => {
 		window.location = "/savedones";
-	}
+	};
+	const handleMicDejun= () => {
+		window.location = "/micdejun";
+	};
+	const handleFelPrincipal= () => {
+		window.location = "/felprincipal";
+	};
+	const handleSupa= () => {
+		window.location = "/supa";
+	};
+	const handleDesert= () => {
+		window.location = "/desert";
+	};
 
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
@@ -27,6 +39,15 @@ const Main = () => {
 			handleMyPage()
 		else if(selected1 === "Salvate")
 			handleSavedOnes()
+		else if(selected === "Mic Dejun")
+			handleMicDejun()
+		else if(selected === "Desert")
+			handleDesert()
+		else if(selected === "Fel Principal")
+			handleFelPrincipal()
+		else if(selected === "Supa")
+			handleSupa()
+		
 	}
 	return (
 		

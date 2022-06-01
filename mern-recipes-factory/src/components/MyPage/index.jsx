@@ -7,17 +7,51 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { useEffect } from "react";
 
 const MyPage = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
 		window.location.reload();
 	};
+    const handleMyPage = () => {
+		window.location = "/mypage";
+	};
+	const handleSavedOnes= () => {
+		window.location = "/savedones";
+	};
+	const handleMicDejun= () => {
+		window.location = "/micdejun";
+	};
+	const handleFelPrincipal= () => {
+		window.location = "/felprincipal";
+	};
+	const handleSupa= () => {
+		window.location = "/supa";
+	};
+	const handleDesert= () => {
+		window.location = "/desert";
+	};
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
 	const options1 = ["Salvate", "Profilul meu"];
     
+    useEffect = () => {
+		if(selected1 === "Profilul meu")
+			handleMyPage()
+		else if(selected1 === "Salvate")
+			handleSavedOnes()
+		else if(selected === "Mic Dejun")
+			handleMicDejun()
+		else if(selected === "Desert")
+			handleDesert()
+		else if(selected === "Fel Principal")
+			handleFelPrincipal()
+		else if(selected === "Supa")
+			handleSupa()
+		
+	}
 	return (
 		
 		<body>
