@@ -36,12 +36,12 @@ const MicDejun = () => {
 	const options1 = ["Salvate", "Profilul meu"];
 
 	let Recipes_data= [
-		{name: "Oua Benedict", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://www.lauralaurentiu.ro/wp-content/uploads/2012/03/oua-benedict-.jpg"},
-		{name: "Clatite", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg"},
-		{name: "Omleta", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/12/62/Asset_1021262.jpg"},
-		{name: "Oua Benedict", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://www.lauralaurentiu.ro/wp-content/uploads/2012/03/oua-benedict-.jpg"},
-		{name: "Clatite", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg"},
-		{name: "Omleta", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/12/62/Asset_1021262.jpg"},
+		{name: "Oua Benedict", duration: "45min", difficulty: "Medium", noOfPortions: "2", img: "https://www.lauralaurentiu.ro/wp-content/uploads/2012/03/oua-benedict-.jpg"},
+		{name: "Clatite", duration: "20min", difficulty: "Hard", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg"},
+		{name: "Omleta", duration: "2h", difficulty: "Easy", noOfPortions: "3", img: "https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/12/62/Asset_1021262.jpg"},
+		{ name: "Oua Benedict", duration: "45min", difficulty: "Medium", noOfPortions: "2", img: "https://www.lauralaurentiu.ro/wp-content/uploads/2012/03/oua-benedict-.jpg" },
+		{ name: "Clatite", duration: "20min", difficulty: "Hard", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg" },
+		{ name: "Omleta", duration: "2h", difficulty: "Easy", noOfPortions: "3", img: "https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/12/62/Asset_1021262.jpg" },
 		
 	]
 	useEffect = () => {

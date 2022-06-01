@@ -46,7 +46,7 @@ export default function ShowRecipe() {
             <div className="recipe">
                 <div className="recipe_space1">
                     <div className="recipe_spaceTop">
-                        <h6> Timp de preparare: 10 min&nbsp;&nbsp;&nbsp;4 portii&nbsp;&nbsp;&nbsp;Easy</h6>
+                        <h6> Timp de preparare: 45 min &nbsp;&nbsp;&nbsp;4 portii&nbsp;&nbsp;&nbsp;Medium</h6>
                     </div>
                     <div className="recipe_space2">
                         <div className="recipe_spaceLeft">
