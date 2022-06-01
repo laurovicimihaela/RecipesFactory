@@ -145,12 +145,6 @@ export default function Write() {
                         <Dropdown1 selected={selected2} setSelected={setSelected2} options={options2}
                             onChange={e => setDifficulty(e.target.value)}
                         />
-                        {/*<textarea*/}
-                        {/*    placeholder="Level of difficulty: (easy / medium / difficult):"*/}
-                        {/*    type="text"*/}
-                        {/*    className="writeInput writeText"*/}
-                        {/*    onChange={e => setDifficulty(e.target.value)}*/}
-                        {/*></textarea>*/}
                     </div>
                     <button className="writeSubmit" type="submit">
                         Publish

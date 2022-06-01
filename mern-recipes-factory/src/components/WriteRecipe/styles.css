@@ -53,6 +53,8 @@
     background-color: antiquewhite;
     border-radius: 15px;
     opacity: 0.9;
+    text-align: center;
+    width: 200px;
 }
             .dropdown .dropdown_content .dropdown_item:hover {
                 background: #f4f4f4;
