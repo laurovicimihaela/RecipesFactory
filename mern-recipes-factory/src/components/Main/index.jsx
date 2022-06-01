@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const Main = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location.reload();
+		window.location='/';
 	};
 	const handleMyPage = () => {
 		window.location = "/mypage";
