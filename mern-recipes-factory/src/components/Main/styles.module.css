@@ -100,7 +100,7 @@ body {
 	right: 360px;
 }
 .carousel{
-	padding: 230px;
+	padding: 50px;
 	margin: 0px, 80px, 0px, 0px;
 	position: -webkit-sticky; /* Safari */
   	position: sticky;
