@@ -5,6 +5,8 @@ import Login from "./components/Login";
 import WriteRecipe from "./components/WriteRecipe";
 import SingleRecipe from "./components/SingleRecipe";
 import MyPage from "./components/MyPage";
+import SavedOnes from "./components/SavedOnes";
+
 function App() {
 	const user = localStorage.getItem("token");
 
@@ -14,6 +16,7 @@ function App() {
 			<Route path="/signup" exact element={<Signup />} />
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/mypage" exact element={<MyPage />} />
+			<Route path="/savedones" exact element={<SavedOnes />} />
 			<Route path="/" element={<Navigate replace to="/login" />} />
 
 		</Routes>

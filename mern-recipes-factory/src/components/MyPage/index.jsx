@@ -5,10 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/system";
 
 const MyPage = () => {
 	const handleLogout = () => {
@@ -19,14 +17,6 @@ const MyPage = () => {
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
 	const options1 = ["Salvate", "Profilul meu"];
-
-    const BookButton = styled(Button)({
-        backgroundColor: "red",
-        color: "white",
-        "&:hover": {
-          backgroundColor: "red",
-        },
-      });
     
 	return (
 		

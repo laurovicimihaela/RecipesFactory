@@ -3,8 +3,6 @@ import Dropdown from "./Dropdown";
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CarouselContainer from "./CarouselContainer";
-import { NavLink } from "react-router-dom";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import { useEffect } from "react";
 
 const Main = () => {
@@ -15,6 +13,10 @@ const Main = () => {
 	const handleMyPage = () => {
 		window.location = "/mypage";
 	}
+	const handleSavedOnes= () => {
+		window.location = "/savedones";
+	}
+
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
@@ -23,6 +25,8 @@ const Main = () => {
 	useEffect = () => {
 		if(selected1 === "Profilul meu")
 			handleMyPage()
+		else if(selected1 === "Salvate")
+			handleSavedOnes()
 	}
 	return (
 		
