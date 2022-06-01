@@ -3,16 +3,27 @@ import Dropdown from "./Dropdown";
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CarouselContainer from "./CarouselContainer";
+import { NavLink } from "react-router-dom";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
+import { useEffect } from "react";
 
 const Main = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
 		window.location.reload();
 	};
+	const handleMyPage = () => {
+		window.location = "/mypage";
+	}
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
 	const options1 = ["Salvate", "Profilul meu"];
+
+	useEffect = () => {
+		if(selected1 === "Profilul meu")
+			handleMyPage()
+	}
 	return (
 		
 		<body>
@@ -20,16 +31,10 @@ const Main = () => {
 				<h1>The Recipes Factory</h1>
 				<div className={styles.allign2}>
 				<Dropdown selected={selected} setSelected={setSelected} options={options}/>
-				<br />
-				<br />
-				<br />
-				<br />
 				</div>
 
 				<div className={styles.allign1}>
 				<Dropdown selected={selected1} setSelected={setSelected1} options={options1}/>
-				<br />
-				<br />
 				</div>
 
 				<button className={styles.white_btn} onClick={handleLogout}>
@@ -38,10 +43,7 @@ const Main = () => {
 
 			</nav>
 		<div className={styles.container}>
-			
-			
 				<CarouselContainer/>
-			
 		</div>
 		
 		</body>
