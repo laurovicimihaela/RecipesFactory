@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 const SavedOnes = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location.reload();
+		window.location='/';
 	};
 	const handleMyPage = () => {
 		window.location = "/mypage";
