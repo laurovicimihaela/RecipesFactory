@@ -1,14 +1,4 @@
-.singleRecipe {
-    flex: 9;
-}
-
-.singleRecipeWrapper {
-    padding: 20px;
-    padding-right: 0;
-    display: flex;
-    flex-direction: column;
-}
-
+//singleRecipe css
 .singleRecipeImg {
     width: 100%;
     height: 300px;
@@ -16,85 +6,85 @@
     object-fit: cover;
 }
 
-.singleRecipeTitle {
+.recipe {
+    background: url(background.jpg);
+    min-height: 1000px;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
+
+.recipe_space1 {
+    background-color: white;
+    width: 1300px;
+    height: 800px;
+    margin-left: 300px;
+    margin-right: 300px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.recipe_space2 {
+    background-color: whitesmoke;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    bottom: 0;
+}
+.recipe_spaceTop {
+    background-color: white;
+    width: 1300px;
+    height: 100px;
+    margin-top: 40px;
+    border-radius: 20px;
+    align-content: center;
     text-align: center;
-    margin: 10px;
-    font-family: "Lora", serif;
-    font-size: 28px;
+}
+.recipe_spaceLeft {
+    background-color: whitesmoke;
+    width: 300px;
+    height: 700px;
+    margin-left: 50px;
+    position: absolute;
+}
+.recipe_spaceMiddle {
+    background-color: whitesmoke;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 350px;
+}
+.recipe_spaceRight {
+    background-color: whitesmoke;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 400px;
+    top: 0;
+}
+.recipe_spaceBottom {
+    background-color: whitesmoke;
+    width: 750px;
+    height: 200px;
+    position: absolute;
+    margin-left: 400px;
+    margin-top:400px;
 }
 
-.singleRecipeTitleInput {
-    margin: 10px;
-    font-family: "Lora", serif;
-    font-size: 28px;
-    text-align: center;
-    border: none;
-    color: gray;
-    border-bottom: 1px solid lightgray;
-}
-
-    .singleRecipeTitleInput:focus {
-        outline: none;
-    }
-
-.singleRecipeEdit {
-    float: right;
-    font-size: 16px;
-}
-
-.singleRecipeIcon {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-    .singleRecipeIcon:first-child {
-        color: teal;
-    }
-
-    .singleRecipeIcon:last-child {
-        color: tomato;
-    }
-
-.singleRecipeInfo {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-family: "Varela Round", sans-serif;
-    color: #b39656;
-}
-
-.singleRecipeDesc {
-    color: #666;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-    .singleRecipeDesc::first-letter {
-        margin-left: 20px;
-        font-size: 30px;
-        font-weight: 600;
-    }
-
-.singleRecipeDescInput {
-    border: none;
-    color: #666;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-    .singleRecipeDescInput:focus {
-        outline: none;
-    }
-
-.singleRecipeButton {
-    width: 100px;
-    border: none;
-    background-color: teal;
+.photo {
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 5px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: flex-end;
-    margin-top: 20px;
+    width: 300px;
+    height: 250px;
+    background: url(ouabenedict.jpg);
+    background-size: cover;
+    background-position: center;
 }
+
+
+
+
+

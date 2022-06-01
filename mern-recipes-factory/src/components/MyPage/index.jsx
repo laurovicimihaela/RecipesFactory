@@ -32,6 +32,9 @@ const MyPage = () => {
 	const handleDesert= () => {
 		window.location = "/desert";
 	};
+	const handleWriteRecipe = () => {
+		window.location = "/writeRecipe";
+	};
 	const [selected, setSelected] = useState("Categorii");
 	const [selected1, setSelected1] = useState("Contul meu");
 	const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
@@ -119,7 +122,10 @@ const MyPage = () => {
         
       </Card>
         </div>
-        </div>
+			</div>
+			<button className="writeSubmit" onClick={handleWriteRecipe}>
+				Write a recipe
+			</button>
 		</body>
 	);
 };

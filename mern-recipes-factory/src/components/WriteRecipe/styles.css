@@ -38,15 +38,15 @@
     }
 
 .dropdown_item {
-        padding: 10px;
-            font-size: 30px;
-            border: none;
-            padding: 20px;
-            width: 70vw;
-            background-color: antiquewhite;
-            height: 100px;
-
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+    background-color: antiquewhite;
+    height: 100px;
 }
+
 .writeDropdown {
     font-size: 20px;
     height: 50px;
@@ -56,6 +56,7 @@
     text-align: center;
     width: 200px;
 }
-            .dropdown .dropdown_content .dropdown_item:hover {
-                background: #f4f4f4;
-            }
+
+.dropdown .dropdown_content .dropdown_item:hover {
+    background: #f4f4f4;
+}

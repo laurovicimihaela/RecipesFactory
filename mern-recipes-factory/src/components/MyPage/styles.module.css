@@ -105,3 +105,16 @@ body {
 	position: -webkit-sticky; /* Safari */
   	position: sticky;
 }
+
+.writeSubmit {
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+	color: white;
+	background-color: darkgreen;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 16px;
+}

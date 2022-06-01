@@ -18,7 +18,10 @@ const JoinButton = styled(Button)({
       color: "white",
       backgroundColor: "grey",
     },
-  });
+});
+const handleButton = () => {
+    window.location = "/singleRecipe";
+};
 
 function RecipeCard({ name, duration, difficulty, noOfPortions, img }) {
 
@@ -44,7 +47,7 @@ function RecipeCard({ name, duration, difficulty, noOfPortions, img }) {
           Portions: {noOfPortions} 
         </Typography>
         <CardActions sx={{ display: "flex", justifyContent: "center" }}>
-            <JoinButton >Vezi Reteta</JoinButton>
+               <button onClick={handleButton}>Vezi Reteta</button>
           </CardActions>
       </CardContent>
       </Card>

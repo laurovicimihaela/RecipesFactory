@@ -15,8 +15,11 @@ export default function Write() {
     const [file, setFile] = useState(null);
 
     const { user } = useContext(Context);
+    const handleSubmit = () => {
+        window.location = "/myPage";
+    };
 
-    const handleSubmit = async (e) => {
+    /*const handleSubmit = async (e) => {
         e.preventDefault();
         const newPost = {
             username: user.username,
@@ -40,7 +43,7 @@ export default function Write() {
             const res = await axios.post("/posts", newPost);
             window.location.replace("/post/" + res.data._id);
         } catch (err) { }
-    };
+    };*/
     const handleLogout = () => {
         localStorage.removeItem("token");
         window.location.reload();
@@ -146,11 +149,11 @@ export default function Write() {
                             onChange={e => setDifficulty(e.target.value)}
                         />
                     </div>
-                    <button className="writeSubmit" type="submit">
-                        Publish
-                    </button>
                 </form>
             </div>
+            <button className="writeSubmit" type="submit" onClick={handleSubmit}>
+                Publish
+            </button>
         </body>
     );
 }

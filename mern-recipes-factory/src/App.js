@@ -27,7 +27,7 @@ function App() {
 			<Route path="/desert" exact element={<Desert />} />
 			<Route path="/writerecipe" exact element={<WriteRecipe />} />
 			<Route path="/" element={<Navigate replace to="/login" />} />
-
+			<Route path="/singlerecipe" exact element={<SingleRecipe />} />
 		</Routes>
 	);
 }
