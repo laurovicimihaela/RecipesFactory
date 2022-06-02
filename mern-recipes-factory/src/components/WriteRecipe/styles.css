@@ -43,14 +43,14 @@
     border: none;
     padding: 20px;
     width: 70vw;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     height: 100px;
 }
 
 .writeDropdown {
     font-size: 20px;
     height: 50px;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     border-radius: 15px;
     opacity: 0.9;
     text-align: center;
