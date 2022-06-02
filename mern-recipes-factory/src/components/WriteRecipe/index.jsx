@@ -120,7 +120,7 @@ const Write = () => {
                         <textarea
                             placeholder="Required time (minutes): "
                             type="text"
-                            className="writeInput writeText"
+                            className="writeInput2 writeText2"
                             onChange={e => setRequiredTime(e.target.value)}
                         ></textarea>
                     </div>
