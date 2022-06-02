@@ -38,10 +38,10 @@ const FelPrincipal = () => {
 	let Recipes_data= [
 		{name: "Sarmale", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://adygio.com/wp-content/uploads/2020/06/Sarmale-cu-ton-sau-orice-peste-sarmale-Balamuc-cu-varza-murata-500x500.jpg"},
 		{name: "Stinco", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://canard.ro/wp-content/uploads/2020/04/stinco-casa-modena.jpg"},
-		{name: "Coaste", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://www.unileverfoodsolutions.ro/dam/global-ufs/mcos/see/romania/calcmenu/recipes/RO-recipes/red-meats-&-red-meat-dishes/coaste-vitel-cu-sos-barbeque-si-legume-cu-ghimbir/main-header.jpg"},
-		{name: "Sarmale", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://adygio.com/wp-content/uploads/2020/06/Sarmale-cu-ton-sau-orice-peste-sarmale-Balamuc-cu-varza-murata-500x500.jpg"},
-		{name: "Stinco", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://canard.ro/wp-content/uploads/2020/04/stinco-casa-modena.jpg"},
-		{name: "Coaste", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://www.unileverfoodsolutions.ro/dam/global-ufs/mcos/see/romania/calcmenu/recipes/RO-recipes/red-meats-&-red-meat-dishes/coaste-vitel-cu-sos-barbeque-si-legume-cu-ghimbir/main-header.jpg"},
+		{name: "Coaste", duration: "2h", difficulty: "Medium", noOfPortions: "3", img: "https://www.unileverfoodsolutions.ro/dam/global-ufs/mcos/see/romania/calcmenu/recipes/RO-recipes/red-meats-&-red-meat-dishes/coaste-vitel-cu-sos-barbeque-si-legume-cu-ghimbir/main-header.jpg"},
+		{ name: "Chiftelute", duration: "2h", difficulty: "Medium", noOfPortions: "20", img: "https://tastebazaar.ro/wp-content/uploads/2022/05/chiftelute-de-curcan-680x900.jpg"},
+		{ name: "Aripioare", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://tastebazaar.ro/wp-content/uploads/2021/10/aripioare-de-pui-lipicioase-680x900.jpg"},
+		{ name: "Somon", duration: "2h", difficulty: "Medium", noOfPortions: "3", img: "https://tastebazaar.ro/wp-content/uploads/2021/05/IMG_5489.jpg"},
 		
 	]
 	useEffect = () => {

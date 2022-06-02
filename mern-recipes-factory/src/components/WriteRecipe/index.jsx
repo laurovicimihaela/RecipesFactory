@@ -5,8 +5,10 @@ import { Context } from "../../context/Context";
 import Dropdown from "../Main/Dropdown";
 import styles from "../Main/styles.module.css";
 import Dropdown1 from "./Dropdown1";
+import { useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Write() {
+const Write = () => {
     const [title, setTitle] = useState("");
     const [requiredTime, setRequiredTime] = useState("");
     const [numberOfPortions, setNumberOfPortions] = useState("");
@@ -16,8 +18,54 @@ export default function Write() {
 
     const { user } = useContext(Context);
     const handleSubmit = () => {
-        window.location = "/myPage";
+        window.location = "/";
     };
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location = '/';
+    };
+    const handleMyPage = () => {
+        window.location = "/mypage";
+    };
+    const handleSavedOnes = () => {
+        window.location = "/savedones";
+    };
+    const handleMicDejun = () => {
+        window.location = "/micdejun";
+    };
+    const handleFelPrincipal = () => {
+        window.location = "/felprincipal";
+    };
+    const handleSupa = () => {
+        window.location = "/supa";
+    };
+    const handleDesert = () => {
+        window.location = "/desert";
+    };
+
+    const [selected, setSelected] = useState("Categorii");
+    const [selected1, setSelected1] = useState("Contul meu");
+    const [selected2, setSelected2] = useState("Level of difficulty:");
+    const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
+    const options1 = ["Salvate", "Profilul meu"];
+    const options2 = ["", "  Easy", " Medium", "  Hard"];
+
+    useEffect = () => {
+        if (selected1 === "Profilul meu")
+            handleMyPage();
+        else if (selected1 === "Salvate")
+            handleSavedOnes();
+        else if (selected === "Mic Dejun")
+            handleMicDejun();
+        else if (selected === "Desert")
+            handleDesert();
+        else if (selected === "Fel Principal")
+            handleFelPrincipal();
+        else if (selected === "Supa")
+            handleSupa();
+
+    }
 
     /*const handleSubmit = async (e) => {
         e.preventDefault();
@@ -44,16 +92,7 @@ export default function Write() {
             window.location.replace("/post/" + res.data._id);
         } catch (err) { }
     };*/
-    const handleLogout = () => {
-        localStorage.removeItem("token");
-        window.location.reload();
-    };
-    const [selected, setSelected] = useState("Categorii");
-    const [selected1, setSelected1] = useState("Contul meu");
-    const [selected2, setSelected2] = useState("Level of difficulty:");
-    const options = ["Mic Dejun", "Fel Principal", "Supă", "Desert"];
-    const options1 = ["Salvate", "Profilul meu"];
-    const options2 = ["","  Easy", " Medium", "  Difficult"];
+  
     return (
 
         <body>
@@ -61,16 +100,10 @@ export default function Write() {
                 <h1>The Recipes Factory</h1>
                 <div className={styles.allign2}>
                     <Dropdown selected={selected} setSelected={setSelected} options={options} />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                 </div>
 
                 <div className={styles.allign1}>
                     <Dropdown selected={selected1} setSelected={setSelected1} options={options1} />
-                    <br />
-                    <br />
                 </div>
 
                 <button className={styles.white_btn} onClick={handleLogout}>
@@ -156,4 +189,5 @@ export default function Write() {
             </button>
         </body>
     );
-}
+};
+export default Write;

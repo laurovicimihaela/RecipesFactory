@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\mern-recipes-factory",
-    "\\mern-recipes-factory\\public",
     "\\mern-recipes-factory\\src",
     "\\mern-recipes-factory\\src\\components",
-    "\\mern-recipes-factory\\src\\components\\Main",
-    "\\mern-recipes-factory\\src\\components\\Signup",
+    "\\mern-recipes-factory\\src\\components\\Category",
+    "\\mern-recipes-factory\\src\\components\\Category\\MicDejun",
+    "\\mern-recipes-factory\\src\\components\\MyPage",
+    "\\mern-recipes-factory\\src\\components\\Recipe",
     "\\mern-recipes-factory\\src\\components\\SingleRecipe",
-    "\\mern-recipes-factory\\src\\components\\WriteRecipe",
-    "\\mern-recipes-factory\\src\\context"
+    "\\mern-recipes-factory\\src\\components\\WriteRecipe"
   ],
-  "SelectedNode": "\\mern-recipes-factory\\src\\components\\Main\\styles.module.css",
+  "SelectedNode": "\\mern-recipes-factory\\src\\components\\Category\\MicDejun\\index.jsx",
   "PreviewInSolutionExplorer": false
 }

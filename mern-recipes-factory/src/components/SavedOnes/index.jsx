@@ -39,10 +39,9 @@ const SavedOnes = () => {
 		{name: "Sarmale", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://adygio.com/wp-content/uploads/2020/06/Sarmale-cu-ton-sau-orice-peste-sarmale-Balamuc-cu-varza-murata-500x500.jpg"},
 		{name: "Clatite", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg"},
 		{name: "Coaste", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://www.unileverfoodsolutions.ro/dam/global-ufs/mcos/see/romania/calcmenu/recipes/RO-recipes/red-meats-&-red-meat-dishes/coaste-vitel-cu-sos-barbeque-si-legume-cu-ghimbir/main-header.jpg"},
-		{name: "Sarmale", duration: "4h", difficulty: "Hard", noOfPortions: "20", img: "https://adygio.com/wp-content/uploads/2020/06/Sarmale-cu-ton-sau-orice-peste-sarmale-Balamuc-cu-varza-murata-500x500.jpg"},
-		{name: "Clatite", duration: "20min", difficulty: "Easy", noOfPortions: "15", img: "https://savoriurbane.com/wp-content/uploads/2019/10/Clătite-pufoase-și-fragede-cea-mai-simplă-rețetă-care-nu-dă-greș-savori-urbane.jpg"},
-		{name: "Coaste", duration: "2h", difficulty: "Expert mode", noOfPortions: "3", img: "https://www.unileverfoodsolutions.ro/dam/global-ufs/mcos/see/romania/calcmenu/recipes/RO-recipes/red-meats-&-red-meat-dishes/coaste-vitel-cu-sos-barbeque-si-legume-cu-ghimbir/main-header.jpg"},
-		
+		{ name: "Sandvisuri calde cu ton", duration: "25min", difficulty: "Medium", noOfPortions: "2", img: "https://tastebazaar.ro/wp-content/uploads/2022/01/sandvisuri-calde-cu-ton-2-680x900.jpg" },
+		{ name: "Waffles dulci/sarate", duration: "30min", difficulty: "Easy", noOfPortions: "10", img: "https://tastebazaar.ro/wp-content/uploads/2020/02/waffles-2-680x900.jpg" },
+		{ name: "Croissant french toast", duration: "35 min", difficulty: "Easy", noOfPortions: "4", img: "https://tastebazaar.ro/wp-content/uploads/2018/02/croissant-french-toast-2-680x900.jpg" },
 	]
 	useEffect = () => {
 		if(selected1 === "Profilul meu")
